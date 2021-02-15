@@ -1,0 +1,12 @@
+{
+    "name": "matheusxavier/wakatime-readme",
+    "description": "Wakatime Weekly Metrics on your Profile Readme.",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Matheus C",
+            "email": "oi@matheuscamargo.co"
+        }
+    ],
+    "require": {}
+}
