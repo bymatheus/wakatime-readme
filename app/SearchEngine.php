@@ -2,7 +2,6 @@
 
 namespace MplusC\WakatimeReadme;
 
-
 use GuzzleHttp\Client;
 use stdClass;
 
@@ -82,9 +81,15 @@ class SearchEngine
         );
 
         foreach ($this->apiReturn['data']['editors'] as $editor) {
+            $string = "\n";
+            $string .= str_pad($editor['name'], 25);
+            $string .= str_pad($editor['text'], 20);
+            $string .= '████████████████████▒░░░░     ';
+            $string .= $editor['percent']. '%';
+
             array_push(
                 $this->newContent,
-                "\n{$editor['name']}         {$editor['text']}         ████████████████████▒░░░░   {$editor['percent']} % "
+                $string
             );
         }
 
@@ -106,9 +111,15 @@ class SearchEngine
         );
 
         foreach ($this->apiReturn['data']['languages'] as $laguage) {
+            $string = "\n";
+            $string .= str_pad($laguage['name'], 25);
+            $string .= str_pad($laguage['text'], 20);
+            $string .= '████████████████████▒░░░░     ';
+            $string .= $laguage['percent']. '%';
+
             array_push(
                 $this->newContent,
-                "\n{$laguage['name']}         {$laguage['text']}         ████████████████████▒░░░░   {$laguage['percent']} % "
+                $string
             );
         }
 
@@ -129,9 +140,15 @@ class SearchEngine
         );
 
         foreach ($this->apiReturn['data']['operating_systems'] as $os) {
+            $string = "\n";
+            $string .= str_pad($os['name'], 25);
+            $string .= str_pad($os['text'], 20);
+            $string .= '████████████████████▒░░░░     ';
+            $string .= $os['percent']. '%';
+
             array_push(
                 $this->newContent,
-                "\n{$os['name']}         {$os['text']}         ████████████████████▒░░░░   {$os['percent']} % "
+                $string
             );
         }
 
@@ -152,9 +169,15 @@ class SearchEngine
         );
 
         foreach ($this->apiReturn['data']['categories'] as $categories) {
+            $string = "\n";
+            $string .= str_pad($categories['name'], 25);
+            $string .= str_pad($categories['text'], 20);
+            $string .= '████████████████████▒░░░░     ';
+            $string .= $categories['percent']. '%';
+
             array_push(
                 $this->newContent,
-                "\n{$categories['name']}         {$categories['text']}         ████████████████████▒░░░░   {$categories['percent']} % "
+                $string
             );
         }
 
