@@ -84,8 +84,8 @@ class SearchEngine
             $string = "\n";
             $string .= str_pad($editor['name'], 25);
             $string .= str_pad($editor['text'], 20);
-            $string .= '████████████████████▒░░░░     ';
-            $string .= $editor['percent']. '%';
+            $string .= $this->generatePercentBar($editor['percent']);
+            $string .= str_pad($editor['percent'], 10, ' ', STR_PAD_LEFT). '%';
 
             array_push(
                 $this->newContent,
@@ -114,8 +114,8 @@ class SearchEngine
             $string = "\n";
             $string .= str_pad($laguage['name'], 25);
             $string .= str_pad($laguage['text'], 20);
-            $string .= '████████████████████▒░░░░     ';
-            $string .= $laguage['percent']. '%';
+            $string .= $this->generatePercentBar($laguage['percent']);
+            $string .= str_pad($laguage['percent'], 10, ' ', STR_PAD_LEFT). '%';
 
             array_push(
                 $this->newContent,
@@ -143,8 +143,8 @@ class SearchEngine
             $string = "\n";
             $string .= str_pad($os['name'], 25);
             $string .= str_pad($os['text'], 20);
-            $string .= '████████████████████▒░░░░     ';
-            $string .= $os['percent']. '%';
+            $string .= $this->generatePercentBar($os['percent']);
+            $string .= str_pad($os['percent'], 10, ' ', STR_PAD_LEFT). '%';
 
             array_push(
                 $this->newContent,
@@ -172,8 +172,8 @@ class SearchEngine
             $string = "\n";
             $string .= str_pad($categories['name'], 25);
             $string .= str_pad($categories['text'], 20);
-            $string .= '████████████████████▒░░░░     ';
-            $string .= $categories['percent']. '%';
+            $string .= $this->generatePercentBar($categories['percent']);
+            $string .= str_pad($categories['percent'], 10, ' ', STR_PAD_LEFT). '%';
 
             array_push(
                 $this->newContent,
@@ -188,8 +188,20 @@ class SearchEngine
         return $this;
     }
 
-    private function commitChanges()
+    private function generatePercentBar(float $percent)
     {
+        $barQuantity = 25;
+        $numberOfEmptyBlocks = intval(round($barQuantity - ($barQuantity / 100 * $percent)));
+        $numberOfCompleteBlocks = intval(round($barQuantity-$numberOfEmptyBlocks));
 
+        $block = '';
+        for ($i = 1; $i <= $numberOfCompleteBlocks; $i++) {
+            $block .= '█';
+        }
+        for ($i = 1; $i <= $numberOfEmptyBlocks; $i++) {
+            $block .= '░';
+        }
+
+        return $block;
     }
 }
