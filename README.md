@@ -1,15 +1,15 @@
 <h1 align="center">👋 Oi! Meu nome é Matheus.</h1>
 
-- 🔭 Atualmente estou trabalhando no [Consultamais](https://consultamais.com.br/).
-- 💻 PHP, Laravel, Symfony, JS, Vue.js, Boostrap.
-- 🌱 Estou estudando **PostgreSQL, PHP e JavaScript**.
-- 📫 Você pode entrar em contato comigo pelo [LinkedIn](https://www.linkedin.com/in/matheuscamargoxavier/) ou pelo meu [site](https://matheuscamargo.co).
+- 🔭  Atualmente estou trabalhando no [Consultamais](https://consultamais.com.br/).
+- 💻  PHP, Laravel, Symfony, JS, Vue.js, Boostrap.
+- 🌱  Estou estudando **PostgreSQL, PHP e JavaScript**.
+- 📫  Você pode entrar em contato comigo pelo [LinkedIn](https://www.linkedin.com/in/matheuscamargoxavier/) ou pelo meu [site](https://matheuscamargo.co).
 
 -------
 
-📊 **Analise de desenvolvimento semanal**
+📊  **Analise de desenvolvimento semanal**
 ```text
-💡Editor
+💡 Editor
 
 PhpStorm                 12 hrs 29 mins      ███████████████░░░░░░░░░░      60.9%
 Browser                  7 hrs 49 mins       ██████████░░░░░░░░░░░░░░░     38.19%

@@ -76,7 +76,7 @@ class SearchEngine
         array_push(
             $this->newContent,
             "\n```text",
-            "\n💡Editor",
+            "\n💡 Editor",
             "\n"
         );
 
