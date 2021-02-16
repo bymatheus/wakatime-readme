@@ -16,3 +16,6 @@ jobs:
 
     - name: Update composer
       run: composer update
+
+    - name: Update stats
+      run: composer semanal-update
