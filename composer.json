@@ -19,6 +19,8 @@
     "scripts": {
         "semanal-update": [
             "php cron.php",
+            "git config --global user.email 'matheuscx@outlook.com'",
+            "git config --global user.name 'Matheus C'",
             "git add .",
             "git commit -m 'Atualizando stats diario'",
             "git push origin main"
