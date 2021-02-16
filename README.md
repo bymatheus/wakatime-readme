@@ -2,7 +2,7 @@
 
 - 🔭  Atualmente estou trabalhando no [Consultamais](https://consultamais.com.br/).
 - 💻  PHP, Laravel, Symfony, JS, Vue.js, Boostrap.
-- 🌱  Estou estudando **PostgreSQL, PHP e JavaScript**.
+- 🌱  Estou estudando **SOLID, PostgreSQL, PHP e JavaScript**.
 - 📫  Você pode entrar em contato comigo pelo [LinkedIn](https://www.linkedin.com/in/matheuscamargoxavier/) ou pelo meu [site](https://matheuscamargo.co).
 
 -------
