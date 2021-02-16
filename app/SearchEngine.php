@@ -28,13 +28,15 @@ class SearchEngine
 
     public function process(): void
     {
-        $this->research();
+        $this
+            ->research();
 
         if ($this->apiHttpStatus !== 200) {
             return;
         }
 
-        $this->updateReadme();
+        $this
+            ->updateReadme();
     }
 
     private function research(): void
@@ -56,18 +58,25 @@ class SearchEngine
         }
     }
 
-    private function updateReadme(): SearchEngine
+    private function updateReadme(): void
     {
-        $this->newContent = file('intro.txt');
-
         $this
+            ->setTopReadme()
             ->putEditor()
             ->putLanguage()
             ->putOS()
-            ->putCategories();
+            ->putCategories()
+            ->setBottomReadme();
 
-        file_put_contents('README.md', $this->newContent);
+        file_put_contents(
+            'README.md',
+            $this->newContent
+        );
+    }
 
+    private function setTopReadme(): SearchEngine
+    {
+        $this->newContent = file('./markdown/TOP.md');
         return $this;
     }
 
@@ -81,15 +90,9 @@ class SearchEngine
         );
 
         foreach ($this->apiReturn['data']['editors'] as $editor) {
-            $string = "\n";
-            $string .= str_pad($editor['name'], 25);
-            $string .= str_pad($editor['text'], 20);
-            $string .= $this->generatePercentBar($editor['percent']);
-            $string .= str_pad($editor['percent'], 10, ' ', STR_PAD_LEFT). '%';
-
             array_push(
                 $this->newContent,
-                $string
+                $this->makeArray($editor)
             );
         }
 
@@ -111,15 +114,9 @@ class SearchEngine
         );
 
         foreach ($this->apiReturn['data']['languages'] as $laguage) {
-            $string = "\n";
-            $string .= str_pad($laguage['name'], 25);
-            $string .= str_pad($laguage['text'], 20);
-            $string .= $this->generatePercentBar($laguage['percent']);
-            $string .= str_pad($laguage['percent'], 10, ' ', STR_PAD_LEFT). '%';
-
             array_push(
                 $this->newContent,
-                $string
+                $this->makeArray($laguage)
             );
         }
 
@@ -140,15 +137,9 @@ class SearchEngine
         );
 
         foreach ($this->apiReturn['data']['operating_systems'] as $os) {
-            $string = "\n";
-            $string .= str_pad($os['name'], 25);
-            $string .= str_pad($os['text'], 20);
-            $string .= $this->generatePercentBar($os['percent']);
-            $string .= str_pad($os['percent'], 10, ' ', STR_PAD_LEFT). '%';
-
             array_push(
                 $this->newContent,
-                $string
+                $this->makeArray($os)
             );
         }
 
@@ -169,15 +160,9 @@ class SearchEngine
         );
 
         foreach ($this->apiReturn['data']['categories'] as $categories) {
-            $string = "\n";
-            $string .= str_pad($categories['name'], 25);
-            $string .= str_pad($categories['text'], 20);
-            $string .= $this->generatePercentBar($categories['percent']);
-            $string .= str_pad($categories['percent'], 10, ' ', STR_PAD_LEFT). '%';
-
             array_push(
                 $this->newContent,
-                $string
+                $this->makeArray($categories)
             );
         }
 
@@ -185,6 +170,20 @@ class SearchEngine
             $this->newContent,
             "\n```"
         );
+        return $this;
+    }
+
+    private function setBottomReadme(): SearchEngine
+    {
+        array_push($this->newContent, "\n");
+
+        foreach (file('./markdown/BOTTOM.md') as $line) {
+            array_push(
+                $this->newContent,
+                $line
+            );
+        }
+
         return $this;
     }
 
@@ -203,5 +202,16 @@ class SearchEngine
         }
 
         return $block;
+    }
+
+    private function makeArray(array $data): string
+    {
+        $string = "\n";
+        $string .= str_pad($data['name'], 25);
+        $string .= str_pad($data['text'], 20);
+        $string .= $this->generatePercentBar($data['percent']);
+        $string .= str_pad($data['percent'], 10, ' ', STR_PAD_LEFT). '%';
+
+        return $string;
     }
 }
