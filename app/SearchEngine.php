@@ -82,6 +82,10 @@ class SearchEngine
 
     private function putEditor(): SearchEngine
     {
+        if (!array_key_exists('editors', $this->apiReturn['data'])) {
+            return $this;
+        }
+
         array_push(
             $this->newContent,
             "\n```text",
@@ -106,6 +110,10 @@ class SearchEngine
 
     private function putLanguage(): SearchEngine
     {
+        if (!array_key_exists('editors', $this->apiReturn['data'])) {
+            return $this;
+        }
+
         array_push(
             $this->newContent,
             "\n```text",
@@ -129,6 +137,10 @@ class SearchEngine
 
     private function putOS(): SearchEngine
     {
+        if (!array_key_exists('editors', $this->apiReturn['data'])) {
+            return $this;
+        }
+
         array_push(
             $this->newContent,
             "\n```text",
@@ -152,6 +164,10 @@ class SearchEngine
 
     private function putCategories(): SearchEngine
     {
+        if (!array_key_exists('editors', $this->apiReturn['data'])) {
+            return $this;
+        }
+
         array_push(
             $this->newContent,
             "\n```text",
