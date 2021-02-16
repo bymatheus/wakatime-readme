@@ -17,7 +17,7 @@ class SearchEngine
      * @param array|null $newContent
      */
     public function __construct(
-        private string          $username = '@bymatheus',
+        private string          $username,
         private string          $range = 'last_7_days',
         private string          $baseUrl = 'https://wakatime.com/api/v1/users',
 
