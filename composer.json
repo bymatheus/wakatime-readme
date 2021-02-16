@@ -18,7 +18,9 @@
     },
     "scripts": {
         "semanal-update": [
-            "@php cron.php"
+            "git add .",
+            "git commit -m 'Atualizando stats diario'",
+            "git push origin main"
         ]
     }
 }
