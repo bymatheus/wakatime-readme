@@ -15,5 +15,10 @@
         "psr-4": {
             "MplusC\\WakatimeReadme\\": "app/"
         }
+    },
+    "scripts": {
+        "semanal-update": [
+            "@php cron.php"
+        ]
     }
 }
