@@ -98,37 +98,36 @@ ___
 ```text
 💡 Editor
 
-ChatGPT                  5 hrs 42 mins       ███████████░░░░░░░░░░░░░░     43.84%
-Spotify                  4 hrs 57 mins       ██████████░░░░░░░░░░░░░░░     38.13%
-Claude Code              2 hrs 6 mins        ████░░░░░░░░░░░░░░░░░░░░░     16.15%
-PhpStorm                 14 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░      1.89%
+ChatGPT                  5 hrs 5 mins        ████████████░░░░░░░░░░░░░     46.12%
+Spotify                  3 hrs 38 mins       ████████░░░░░░░░░░░░░░░░░     32.89%
+Claude Code              1 hr 48 mins        ████░░░░░░░░░░░░░░░░░░░░░     16.37%
+PhpStorm                 30 mins             █░░░░░░░░░░░░░░░░░░░░░░░░      4.62%
 ```
 ```text
 💬 Linguagem
 
-Other                    10 hrs 58 mins      █████████████████████░░░░     84.28%
-Markdown                 1 hr 32 mins        ███░░░░░░░░░░░░░░░░░░░░░░     11.86%
-PHP                      10 mins             ░░░░░░░░░░░░░░░░░░░░░░░░░      1.33%
-YAML                     8 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░      1.14%
-Terraform                4 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░      0.55%
-GitIgnore file           3 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░       0.4%
-Nginx Configuration      1 min               ░░░░░░░░░░░░░░░░░░░░░░░░░       0.2%
-.env file                0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░      0.07%
-Makefile                 0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░      0.06%
-Nginx configuration file 0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░      0.05%
-JSON                     0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░      0.03%
-Bash                     0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░      0.02%
+Other                    9 hrs 1 min         ████████████████████░░░░░     81.74%
+Markdown                 1 hr 29 mins        ███░░░░░░░░░░░░░░░░░░░░░░     13.43%
+YAML                     18 mins             █░░░░░░░░░░░░░░░░░░░░░░░░      2.78%
+.env file                6 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░      1.01%
+GitIgnore file           3 mins              ░░░░░░░░░░░░░░░░░░░░░░░░░      0.47%
+Nginx Configuration      1 min               ░░░░░░░░░░░░░░░░░░░░░░░░░      0.24%
+Terraform                0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░      0.15%
+Makefile                 0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░      0.07%
+Nginx configuration file 0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░      0.06%
+Bash                     0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░      0.05%
+JSON                     0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░         0%
 yarn.lock                0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░         0%
 ```
 ```text
 💻 Sistema Operacional
 
-Mac                      13 hrs 1 min        █████████████████████████       100%
+Mac                      11 hrs 2 mins       █████████████████████████       100%
 ```
 ```text
 📦 Categoria
 
-Coding                   8 hrs 43 mins       █████████████████░░░░░░░░     67.04%
-AI Coding                4 hrs 17 mins       ████████░░░░░░░░░░░░░░░░░     32.94%
+Coding                   7 hrs 2 mins        ████████████████░░░░░░░░░     63.82%
+AI Coding                3 hrs 59 mins       █████████░░░░░░░░░░░░░░░░     36.17%
 Writing Docs             0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░      0.01%
 ```
